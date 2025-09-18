@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMOTABI - 感情と旅が交わる場所</title>
+  <meta name="description" content="写真から感情を読み取り、あなたの心に響く旅先を提案します。感情と旅が交わる新しい体験を始めましょう。">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  
+  <script>
+    window.PLACEHOLDER_IMG = "{{ url_for('static', filename='images/placeholder_r1.png') }}";
+  </script>
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">EMOTABI</span>
+        <span class="logo-subtitle">感情と旅が交わる場所</span>
+      </div>
+      
+      <!-- モバイルナビゲーション用トグルボタン -->
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-menu">
+        <a href="#story" class="nav-link">EMOTABIとは</a>
+        <a href="#experience" class="nav-link">感情分析</a>
+        <a href="#journey" class="nav-link">旅を始める</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- メインビジュアル -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <img src="{{ url_for('static', filename='images/hero-banner.jpg') }}" alt="那須高原の風景" class="hero-image">
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="hero-title-main">EMOTABI</span>
+          <span class="hero-title-sub">感情と旅が交わる場所</span>
+        </h1>
+        <p class="hero-description">
+          写真から感情を読み取り、あなたの心に響く旅先を提案します。<br>
+          感情と旅が交わる新しい体験を始めましょう。
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ストーリー -->
+  <section class="story" id="story">
+    <div class="container">
+      <div class="story-content">
+        <div class="story-text">
+          <h2 class="section-title">
+            <span class="section-title-main">STORY</span>
+            <span class="section-title-sub">感情があなたの旅を導く</span>
+          </h2>
+          <div class="story-description">
+            <p>
+              旅の本質は、その瞬間のあなたの感情と心の状態にあります。<br>
+              美しい風景、新しい出会い、美味しい食事、そして心に残る体験。
+            </p>
+            <p>
+              EMOTABIは、写真の「色彩」「物体」「雰囲気」から感情を分析し、あなたが選んだ地域の中から、その時の心に寄り添う旅先を提案します。
+            </p>
+            <p>
+              感情の数だけ出会いと旅がある。<br>
+              今日のあなたにぴったりの旅を見つけてみませんか。
+            </p>
+          </div>
+        </div>
+        <div class="story-visual">
+          <div class="story-image-container">
+            <div class="story-slideshow">
+              <img src="{{ url_for('static', filename='images/about1.jpg') }}" alt="旅の風景" class="story-image active">
+              <img src="{{ url_for('static', filename='images/about2.jpg') }}" alt="旅の風景" class="story-image">
+              <img src="{{ url_for('static', filename='images/about3.jpg') }}" alt="旅の風景" class="story-image">
+            </div>
+            <div class="story-image-overlay">
+              <span class="story-image-text">感情の旅</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 体験 -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <h2 class="section-title center">
+        <span class="section-title-main">EXPERIENCE</span>
+        <span class="section-title-sub">3つの感情分析</span>
+      </h2>
+      
+      <div class="experience-grid">
+        <div class="experience-item">
+          <div class="experience-icon">
+            <div class="icon-circle">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12 12-5.373 12-12S22.627 4 16 4z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="experience-title">色彩感情</h3>
+          <p class="experience-description">
+            写真の色彩から感じる<br>
+            心の状態を読み取ります
+          </p>
+        </div>
+        
+        <div class="experience-item">
+          <div class="experience-icon">
+            <div class="icon-circle">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M8 8h16v16H8V8z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="experience-title">物体感情</h3>
+          <p class="experience-description">
+            写真に写る物体から<br>
+            感情の方向性を分析します
+          </p>
+        </div>
+        
+        <div class="experience-item">
+          <div class="experience-icon">
+            <div class="icon-circle">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 2L20 12h10l-8 6 3 10-9-7-9 7 3-10-8-6h10z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="experience-title">雰囲気感情</h3>
+          <p class="experience-description">
+            写真全体の雰囲気から<br>
+            深層心理を読み解きます
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 旅の始まり -->
+  <section class="journey" id="journey">
+    <div class="container">
+      <h2 class="section-title center">
+        <span class="section-title-main">JOURNEY</span>
+        <span class="section-title-sub">さあ、あなたの旅を始めましょう</span>
+      </h2>
+      
+      <div class="journey-form">
+        <form id="analyze-form" enctype="multipart/form-data">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">行きたい旅行先</label>
+              <select id="region" name="region" class="form-select" required>
+                <option value="" disabled selected>地域を選択</option>
+                <option>東京</option>
+                <option>大阪</option>
+                <option>京都</option>
+                <option>那須</option>
+                <option>自分で入力</option>
+              </select>
+              <input type="text" id="region-other" name="region_other" class="form-input hidden" placeholder="地域を入力してください">
+            </div>
+            <div class="form-group">
+              <label class="form-label">旅行目的</label>
+              <select id="purpose" name="purpose" class="form-select" required>
+                <option value="" disabled selected>目的を選択</option>
+                <option>観光</option>
+                <option>ごはん</option>
+                <option>レジャー</option>
+                <option>自然</option>
+                <option>自分で入力</option>
+              </select>
+              <input type="text" id="purpose-other" name="purpose_other" class="form-input hidden" placeholder="目的を入力してください">
+            </div>
+          </div>
+          
+          <div class="form-upload">
+            <label class="form-label">あなたの今の気持ちを表す写真をアップロード</label>
+            <div class="upload-area">
+              <input type="file" id="image" name="image" accept="image/*" class="upload-input" required style="display: none;">
+              <label for="image" class="upload-content">
+                <div class="upload-icon">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M24 16V32M16 24H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                  </svg>
+                </div>
+                <p class="upload-text">写真をドラッグ&ドロップ<br>またはクリックして選択</p>
+              </label>
+              <div class="upload-preview hidden">
+                <img class="preview-image" alt="プレビュー">
+                <div class="preview-overlay">
+                  <button type="button" class="preview-remove">×</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-submit">
+            <button type="submit" class="submit-button">
+              <span class="submit-text">感情分析を開始</span>
+              <div class="submit-arrow">→</div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 結果セクション -->
+  <section class="results hidden" id="results">
+    <div class="container">
+      <h2 class="section-title center">
+        <span class="section-title-main">RESULT</span>
+        <span class="section-title-sub">あなたの感情分析結果</span>
+      </h2>
+      
+      <div class="emotion-analysis">
+        <div class="emotion-item">
+          <div class="emotion-label">色彩感情</div>
+          <div class="emotion-value" id="color-emotion">-</div>
+          
+        </div>
+        <div class="emotion-item">
+          <div class="emotion-label">物体感情</div>
+          <div class="emotion-value" id="object-emotion">-</div>
+          
+        </div>
+        <div class="emotion-item">
+          <div class="emotion-label">雰囲気感情</div>
+          <div class="emotion-value" id="atmosphere-emotion">-</div>
+          
+        </div>
+      </div>
+      
+      <div class="recommendations">
+        <h3 class="recommendations-title">あなたにおすすめの旅先</h3>
+        <div class="recommendations-grid" id="suggestions-list">
+          <!-- 動的にカードが挿入される -->
+        </div>
+      </div>
+      
+      <!-- シンプルなアンケートリンク -->
+      <div class="survey-simple" style="text-align:center; margin: 32px 0;">
+        <a href="https://forms.gle/Hc5Emtz2hJH6WMT78" target="_blank" rel="noopener" class="survey-button" style="display:inline-block; padding:12px 20px; border-radius:8px; background:#6b8e3d; color:#fff; text-decoration:none; font-weight:600;">
+          アンケートに回答する（外部フォームが開きます）
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">EMOTABI</span>
+          <span class="logo-subtitle">感情と旅が交わる場所</span>
+        </div>
+        <div class="footer-info">
+          <p>感情分析型観光案内サイト</p>
+          <p>開発・提供：芝浦工業大学 最適システムデザイン研究室</p>
+          <p>© 2024 EMOTABI. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- アンケート誘導バナー -->
+  <div class="survey-notification hidden" id="survey-notification">
+    <div class="notification-content">
+      <span class="notification-text"> 分析結果はいかがでしたか？アンケートにもご協力ください！</span>
+      <button class="notification-button" onclick="scrollToSurvey()">アンケートへ</button>
+      <button class="notification-close" onclick="closeSurveyNotification()">×</button>
+    </div>
+  </div>
+
+  <!-- ローディング -->
+  <div class="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">感情を分析しています...</div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

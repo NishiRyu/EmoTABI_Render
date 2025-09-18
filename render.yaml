@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: emotabi-pre
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+    autoDeploy: true
+    buildCommand: echo "Building Docker container..." 

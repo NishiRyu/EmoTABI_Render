@@ -1,0 +1,30 @@
+# Core web framework
+Flask==3.0.0
+Werkzeug==3.0.4
+gunicorn==23.0.0
+
+# Environment and configuration
+python-dotenv==1.0.1
+
+# Google APIs
+googlemaps==4.10.0
+
+# Image processing
+opencv-python-headless==4.9.0.80
+Pillow==10.0.1
+
+# AI/ML dependencies
+openai==1.56.1
+httpx==0.27.2
+ultralytics==8.2.103
+numpy==1.26.4
+scikit-learn==1.5.2
+
+# Data processing
+pandas==2.2.3
+
+# Security
+Flask-Talisman==1.1.0
+
+# HTTP requests
+requests==2.31.0

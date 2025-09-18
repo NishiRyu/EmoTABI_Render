@@ -1,0 +1,5 @@
+[33maf074a3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m プレースホルダー画像をplaceholder.pngからplaceholder_r1.pngに変更
+[33m708037b[m スマホ最適化実装: モバイルナビタッチ対応レスポンシブデザイン
+[33ma57226a[m 依存関係修正: openai 1.56.1 & httpx 0.27.2 (proxiesエラー解消)
+[33md0e0e03[m OpenAI API修正&UI改善
+[33mb733074[m 完全フォールバック削除&OpenAI API修正
