@@ -9,15 +9,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     g++ \
     curl \
-    libgl1-mesa-dri \
-    libegl1-mesa \
+    libgl1 \
+    libegl1 \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
-    libxrender-dev \
+    libxrender1 \
     libgomp1 \
-    libfontconfig1-dev \
-    libfreetype6-dev \
+    libfontconfig1 \
+    libfreetype6 \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
